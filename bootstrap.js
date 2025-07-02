@@ -20,7 +20,7 @@ function collectFiles(dir, exts) {
 // compile the compiler using the bootstrap compiler
 // const bscFiles = [
 //     ...collectFiles("./bootstrap", [".quill"]),
-//     ...collectFiles("./std-base/src", [".quill"]),
+//     ...collectFiles("./std/src", [".quill"]),
 //     ...collectFiles("./compiler/src", [".quill"])
 // ];
 // const bscSrcFiles = {};
@@ -45,13 +45,14 @@ function collectFiles(dir, exts) {
 
 // have the compiler compile itself
 const qiqSrcPaths = [
-    ...collectFiles("./std-base/src", [".quill"]),
+    ...collectFiles("./std/src", [".quill"]),
     ...collectFiles("./std-c/src", [".quill"]),
     ...collectFiles("./compiler/src", [".quill"]),
     ...collectFiles("./cli/src", [".quill"]),
     ...collectFiles("./os/src", [".quill"]),
     ...collectFiles("./conc/src", [".quill"]),
-    ...collectFiles("./terminal/src", [".quill"])
+    ...collectFiles("./terminal/src", [".quill"]),
+    ...collectFiles("./json/src", [".quill"])
 ];
 const qiqExtSourcePaths = [
     ...collectFiles("./runtime-c/src-c", [".c"]),
